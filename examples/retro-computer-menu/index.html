@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Computer Menu</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="screen">
+      <section id="boot-sequence" class="boot-sequence" aria-live="polite">
+        <p class="boot-line">ZBD OS v0.1...</p>
+        <p class="boot-line">Checking memory.................. OK</p>
+        <p class="boot-line">Loading wallet services.......... OK</p>
+        <p class="boot-line">Starting game environment........ OK</p>
+        <p class="boot-line">Launching desktop...</p>
+      </section>
+
+      <section id="desktop" class="desktop hidden" aria-label="Desktop applications">
+        <header class="top-bar">
+          <span>ZBD Retro Desktop</span>
+          <span id="clock"></span>
+        </header>
+
+        <div class="app-grid">
+          <button class="app-icon" data-app="Crypto Wallet">💰<span>Crypto Wallet</span></button>
+          <button class="app-icon" data-app="Game Menu">🕹️<span>Game Menu</span></button>
+          <button class="app-icon" data-app="Settings">⚙️<span>Settings</span></button>
+          <button class="app-icon" data-app="Store">🛒<span>Store</span></button>
+          <button class="app-icon" data-app="Achievements">🏆<span>Achievements</span></button>
+          <button class="app-icon" data-app="Info">ℹ️<span>Info</span></button>
+        </div>
+      </section>
+
+      <dialog id="coming-soon-modal" class="modal">
+        <article class="modal-window">
+          <header>
+            <h2 id="modal-title">Coming Soon</h2>
+          </header>
+          <img src="./coming-soon.svg" alt="Coming soon" />
+          <button id="close-modal" autofocus>Close</button>
+        </article>
+      </dialog>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
