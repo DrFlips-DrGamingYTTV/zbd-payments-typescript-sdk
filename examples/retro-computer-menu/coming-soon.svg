@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="Coming soon">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#051a0d"/>
+      <stop offset="1" stop-color="#0b2f1b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#g)"/>
+  <rect x="30" y="30" width="740" height="360" rx="12" fill="#031108" stroke="#2f8d4f" stroke-width="4"/>
+  <text x="400" y="175" text-anchor="middle" fill="#6cff7f" font-family="Courier New, monospace" font-size="56">COMING SOON</text>
+  <text x="400" y="230" text-anchor="middle" fill="#93ffb7" font-family="Courier New, monospace" font-size="26">This application is still loading...</text>
+  <text x="400" y="280" text-anchor="middle" fill="#41cc6f" font-family="Courier New, monospace" font-size="20">Press Close to return to desktop</text>
+</svg>
