@@ -42,17 +42,59 @@
         </div>
       </section>
 
-      <dialog id="coming-soon-modal" class="modal">
+      <dialog id="app-modal" class="modal">
         <article class="modal-window">
           <header>
             <h2 id="modal-title">Coming Soon</h2>
           </header>
-          <img src="./coming-soon.svg" alt="Coming soon" />
+
+          <section id="coming-soon-panel">
+            <img src="./coming-soon.svg" alt="Coming soon" />
+          </section>
+
+          <section id="game-menu-panel" class="game-menu hidden">
+            <div class="game-toolbar">
+              <button data-game-tab="tic" class="tab-btn active">Tic-Tac-Toe</button>
+              <button data-game-tab="chess" class="tab-btn">Chess</button>
+            </div>
+
+            <section id="tic-tab" class="game-tab active">
+              <div class="controls-row">
+                <label>
+                  CPU Intelligence
+                  <input id="tic-intelligence" type="range" min="1" max="5" value="4" />
+                  <span id="tic-level">4/5</span>
+                </label>
+                <button id="tic-reset" type="button">New Game</button>
+              </div>
+              <p id="tic-status" class="status-line"></p>
+              <div id="tic-board" class="tic-board" role="grid" aria-label="Tic Tac Toe board"></div>
+              <p id="tic-commentary" class="commentary"></p>
+            </section>
+
+            <section id="chess-tab" class="game-tab hidden">
+              <div class="controls-row">
+                <label>
+                  Bot Difficulty
+                  <select id="chess-difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="hard">Hard</option>
+                  </select>
+                </label>
+                <button id="chess-reset" type="button">New Game</button>
+              </div>
+              <p id="chess-status" class="status-line"></p>
+              <div id="chess-board" class="chess-board" role="grid" aria-label="Chess board"></div>
+              <p id="chess-commentary" class="commentary"></p>
+            </section>
+          </section>
+
           <button id="close-modal" autofocus>Close</button>
         </article>
       </dialog>
     </main>
 
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
